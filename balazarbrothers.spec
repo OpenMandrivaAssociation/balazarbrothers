@@ -1,7 +1,7 @@
 %define name 	balazarbrothers   
 %define oname   BalazarBrothers
 %define version 0.3.1
-%define	rel	2
+%define	rel	3
 %define release %mkrel %{rel}
 
 Name:           %{name}
@@ -9,7 +9,7 @@ Version:        %{version}
 Release:        %{release}
 License:        GPL
 Url:		http://home.gna.org/oomadness/en/balazar_brother/index.html
-Source:        http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
+Source:		http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Group:          Games/Puzzles
 Summary:        Balazar Brother is an amazing libre (GPL'ed) 3D puzzle game
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -35,18 +35,6 @@ rm -rf `find -name CVS` `find -name .cvswrappers`
 %{__python} setup.py install --root=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_menudir}
-
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%name): needs="x11" \
-        section="More Applications/Games/Puzzles" \
-        title="Balazar Brothers" \
-        longtitle="%{summary}" \
-        command="%{_bindir}/balazar_brothers" \
-        icon="puzzle_section.png" \
-        startup_notify="true" \
-        multiple_files="true" \
-        xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -76,5 +64,7 @@ EOF
 %doc README 
 %_bindir/*
 %_datadir/balazar_brothers
-%_menudir/*
 %_datadir/applications/*
+%_datadir/*.egg-info
+
+
