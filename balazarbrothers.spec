@@ -12,6 +12,7 @@ Url:		http://home.gna.org/oomadness/en/balazar_brother/index.html
 Source:		http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Group:          Games/Puzzles
 Summary:        Balazar Brother is an amazing libre (GPL'ed) 3D puzzle game
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	cerealizer soya glew openal cal3d python-twisted
 Requires:	pyvorbis pyogg pyopenal tofu
 Buildarch:	noarch
