@@ -13,7 +13,7 @@ Source:		http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Group:          Games/Puzzles
 Summary:        Amazing libre (GPL'ed) 3D puzzle game
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires:	cerealizer soya glew openal cal3d python-twisted
+Requires:	cerealizer soya glew openal cal3d python-twisted python
 Requires:	pyvorbis pyogg pyopenal tofu
 Buildarch:	noarch
 
