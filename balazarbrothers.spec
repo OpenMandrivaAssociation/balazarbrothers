@@ -16,7 +16,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	cerealizer soya glew openal cal3d python-twisted python
 Requires:	pyvorbis pyogg pyopenal tofu
 # (tv) for python:/usr/lib/python2.5/distutils/core.py
-BuildRequires: python
+BuildRequires: python-devel
 Buildarch:	noarch
 
 %description
