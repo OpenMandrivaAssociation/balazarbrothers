@@ -1,7 +1,7 @@
 %define name 	balazarbrothers   
 %define oname   BalazarBrothers
 %define version 0.3.1
-%define	rel	4
+%define	rel	5
 %define release %mkrel %{rel}
 
 Name:           %{name}
