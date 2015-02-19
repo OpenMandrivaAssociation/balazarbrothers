@@ -1,26 +1,22 @@
-%define name 	balazarbrothers   
 %define oname   BalazarBrothers
-%define version 0.3.1
 
-%define release 6
-
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           balazarbrothers
+Version:        0.3.1
+Release:        6
 License:        GPL
 Url:		http://home.gna.org/oomadness/fr/balazar_brothers/index.html
 Source:		http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Group:          Games/Puzzles
 Summary:        Amazing libre (GPL'ed) 3D puzzle game
-Requires:	cerealizer 
-Requires:	soya 
-Requires:	glew 
-Requires:	openal 
-Requires:	cal3d 
+Requires:	cerealizer
+Requires:	soya
+Requires:	glew
+Requires:	openal
+Requires:	cal3d
 Requires:	python-twisted python
-Requires:	pyvorbis 
-Requires:	pyogg 
-Requires:	pyopenal 
+Requires:	pyvorbis
+Requires:	pyogg
+Requires:	pyopenal
 Requires:	tofu
 
 BuildRequires: python2-devel
@@ -31,7 +27,7 @@ Buildarch:	noarch
 Balazar Brother is an amazing libre (GPL'ed) 3D puzzle game.
 
 %prep
-%setup -q  -n %{oname}-%{version}
+%setup -qn %{oname}-%{version}
 rm -rf `find -name CVS` `find -name .cvswrappers`
 
 %build
@@ -59,14 +55,9 @@ StartupNotify=true
 EOF
 
 
-
 %files
 %doc README 
-%_bindir/*
-%_datadir/balazar_brothers
-%_datadir/applications/*
-%_datadir/*.egg-info
-
-
-
-
+%{_bindir}/*
+%{_datadir}/balazar_brothers
+%{_datadir}/applications/*
+%{_datadir}/*.egg-info
