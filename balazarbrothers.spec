@@ -4,7 +4,7 @@ Name:           balazarbrothers
 Version:        0.3.1
 Release:        6
 License:        GPL
-Url:		http://home.gna.org/oomadness/fr/balazar_brothers/index.html
+Url:		https://home.gna.org/oomadness/fr/balazar_brothers/index.html
 Source:		http://download.gna.org/soya/%{oname}-%{version}.tar.bz2
 Group:          Games/Puzzles
 Summary:        Amazing libre (GPL'ed) 3D puzzle game
